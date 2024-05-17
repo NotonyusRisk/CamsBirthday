@@ -1,13 +1,13 @@
 import { Typography, Box, Link, Button } from "@mui/material";
 import { blueGrey } from "@mui/material/colors";
-import IconInicio from './assets/logos/icon-inicio.svg'
+import IconInicio from "./assets/logos/icon-inicio.svg";
 
 function App() {
   return (
     <>
       <Box
         sx={{
-          mt: 20,
+          mt: 15,
           width: "100%",
           display: "flex",
           alignItems: "center",
@@ -15,10 +15,22 @@ function App() {
           gap: 10,
         }}
       >
-        <img src={IconInicio} alt="" />
-        <Typography sx={{textAlign: 'center'}} variant="h3" fontWeight={700} fontSize={{ xs: 30, md: 60 }}>
-          Feliz cumpleaños <br /> Cam
-        </Typography>
+        <Box sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: 2
+        }}>
+          <img src={IconInicio} alt="" width="50" />
+          <Typography
+            sx={{ textAlign: "center" }}
+            variant="h3"
+            fontWeight={700}
+            fontSize={{ xs: 30, md: 60 }}
+          >
+            Feliz cumpleaños <br /> Cam
+          </Typography>
+        </Box>
         <Box
           sx={{
             display: "flex",
@@ -26,7 +38,7 @@ function App() {
             gap: 2,
           }}
         >
-          <Link>
+          <Link to='/Poetry'>
             <Button
               sx={{
                 p: 2,
@@ -38,7 +50,7 @@ function App() {
               Poemas de cumpleaños
             </Button>
           </Link>
-          <Link href='https://open.spotify.com/playlist/7s78ASHc8fNnQ0JH0ZUdSp?si=sad46oS3ThidGHHu_Aw2Ow'>
+          <Link href="https://open.spotify.com/playlist/7s78ASHc8fNnQ0JH0ZUdSp?si=sad46oS3ThidGHHu_Aw2Ow">
             <Button
               sx={{
                 p: 2,
